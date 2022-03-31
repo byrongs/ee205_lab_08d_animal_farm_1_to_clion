@@ -57,7 +57,7 @@ bool fixCat( const size_t index ) {
 }
 
 
-bool updateCatWeight( const size_t index, const float weight ) {
+bool updateCatWeight( const size_t index, const Weight weight ) {
     if( !isIndexValid( index ) ) {
         fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
         return false;

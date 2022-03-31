@@ -47,7 +47,7 @@ extern bool isIndexValid( const size_t index );
 
 extern bool isNameValid( const char* name );
 
-extern bool isWeightValid( const Weight );
+extern bool isWeightValid( const Weight weight );
 
 extern void wipeCat( const size_t index );
 
