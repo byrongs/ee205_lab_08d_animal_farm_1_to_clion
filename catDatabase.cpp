@@ -20,11 +20,12 @@
 
 struct Catinfo cats[MAX_CATS]; //array
 
-size_t numCats = 0 ;
+
+NumCats numCats = 0 ; //typedef for numCats
 
 /// Zeros out a cat's information from the database
 
-void wipeCatInternal( const size_t index ) {
+void wipeCatInternal( const NumCats index ) {
     memset( &cats[index], 0, sizeof( struct Catinfo )) ;
 
 }
@@ -33,7 +34,7 @@ void wipeCatInternal( const size_t index ) {
 
 
 /// Zeros out a cat's information from the database
-void wipeCat( const size_t index ) {
+void wipeCat( const NumCats index ) {
     assert( isIndexValid( index ));
 
     wipeCatInternal( index );
@@ -67,7 +68,7 @@ extern bool validateDatabase() {
 
 
 /// Verify the index is a valid value for this database
-extern bool isIndexValid( const size_t index ) {
+extern bool isIndexValid( const NumCats index ) {
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wtype-limits"
     if( index < 0 ) {
@@ -121,7 +122,7 @@ bool isWeightValid( const Weight weight) {
 
 ///swap cats in indexes
 
-bool swapCat( const size_t a, const size_t b ) {
+bool swapCat( const NumCats a, const NumCats b ) {
     if( !isIndexValid( a ) ) {
         fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
         return false;

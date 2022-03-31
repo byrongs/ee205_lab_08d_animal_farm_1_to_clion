@@ -27,7 +27,7 @@
         }
 
 
-bool updateCatName( const size_t index, const char* name ) {
+bool updateCatName( const NumCats index, const char* name ) {
     if( !isIndexValid( index ) ) {
         fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
         return false;
@@ -44,7 +44,7 @@ bool updateCatName( const size_t index, const char* name ) {
 }
 
 
-bool fixCat( const size_t index ) {
+bool fixCat( const NumCats index ) {
     if(  !isIndexValid( index ) ) {
         fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
         return false;
@@ -57,7 +57,7 @@ bool fixCat( const size_t index ) {
 }
 
 
-bool updateCatWeight( const size_t index, const Weight weight ) {
+bool updateCatWeight( const NumCats index, const Weight weight ) {
     if( !isIndexValid( index ) ) {
         fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
         return false;
@@ -70,19 +70,19 @@ bool updateCatWeight( const size_t index, const Weight weight ) {
 }
 
 
-bool updateCatCollar1( const size_t index, const enum Color color ) {
+bool updateCatCollar1( const NumCats index, const enum Color color ) {
     CHECK_INDEX( index )
     cats[index].collarColor1 = color ;
     return true;
 }
 
-bool updateCatCollar2( const size_t index, const enum Color color ) {
+bool updateCatCollar2( const NumCats index, const enum Color color ) {
     CHECK_INDEX( index )
     cats[index].collarColor2 = color;
     return true;
 }
 
-bool updateCatLicense( const size_t index, const unsigned long long license ) {
+bool updateCatLicense( const NumCats index, const unsigned long long license ) {
     CHECK_INDEX( index )
     cats[index].license = license ;
     return true;

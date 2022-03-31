@@ -17,7 +17,7 @@
 #include "reportCats.h"
 #include "catDatabase.h"
 
-void printCat( const size_t index ) {
+void printCat( const NumCats index ) {
     if( !isIndexValid( index ) ) {
         fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
         return;
@@ -40,19 +40,19 @@ void printAllCats() {
     printf( "numCats = [%lu]\n", numCats );
 #endif
 
-    for( size_t i = 0 ; i < numCats ; i++ ) {
+    for( NumCats i = 0 ; i < numCats ; i++ ) {
         printCat( i );
     }
 }
 
 
-size_t findCat( const char* name ) {
+NumCats findCat( const char* name ) {
     if( name == NULL ) {
         return BAD_CAT ;
     }
 
 
-    for( size_t i = 0 ; i < numCats ; i++ ) {
+    for( NumCats i = 0 ; i < numCats ; i++ ) {
         if( strncmp( name, cats[i].name, MAX_CAT_NAME ) == 0 ) {  // Found a match!
             return i;
         }

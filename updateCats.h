@@ -16,9 +16,9 @@
 #include "catDatabase.h"
 
 
-extern bool updateCatName( const size_t index, const char* name ) ;
-extern bool fixCat( const size_t index ) ;
-extern bool updateCatWeight( const size_t index, const Weight weight ) ;
-extern bool updateCatCollar1( const size_t index, const enum Color color ) ;
-extern bool updateCatCollar2( const size_t index, const enum Color color ) ;
-extern bool updateCatLicense( const size_t index, const unsigned long long license );
+extern bool updateCatName( const NumCats index, const char* name ) ;
+extern bool fixCat( const NumCats index ) ;
+extern bool updateCatWeight( const NumCats index, const Weight weight ) ;
+extern bool updateCatCollar1( const NumCats index, const enum Color color ) ;
+extern bool updateCatCollar2( const NumCats index, const enum Color color ) ;
+extern bool updateCatLicense( const NumCats index, const unsigned long long license );

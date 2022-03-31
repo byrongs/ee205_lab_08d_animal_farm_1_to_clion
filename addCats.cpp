@@ -58,7 +58,7 @@ unsigned int addCat( const char* name
 
     // Add cat
 
-    size_t catIndex = numCats;
+    NumCats catIndex = numCats;
 
     strncpy( cats[catIndex].name, name, MAX_CAT_NAME ) ;
     cats[catIndex].gender = gender  ;

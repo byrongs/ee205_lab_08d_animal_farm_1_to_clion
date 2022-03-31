@@ -22,6 +22,8 @@ enum Color { BLACK=0, WHITE, RED, BLUE, GREEN, PINK } ;
 
 typedef float Weight ; //Typedef declaration of float->weight//
 
+typedef unsigned long NumCats; //Typedef declaration of unsigned long ->NumCats
+
 struct Catinfo {
     char name[MAX_CAT_NAME] ;
     enum Gender gender ;
@@ -33,7 +35,8 @@ struct Catinfo {
     unsigned long long license ;
 };
 extern struct Catinfo cats[MAX_CATS] ;
-extern size_t numCats ;  /// This points to the next available cat we can add to database
+
+extern NumCats numCats ;  /// This points to the next available cat we can add to database
 
 
 
@@ -43,12 +46,12 @@ extern bool isFull() ;
 
 extern bool validateDatabase();
 
-extern bool isIndexValid( const size_t index );
+extern bool isIndexValid( const NumCats index );
 
 extern bool isNameValid( const char* name );
 
 extern bool isWeightValid( const Weight weight );
 
-extern void wipeCat( const size_t index );
+extern void wipeCat( const NumCats index );
 
-extern bool swapCat( const size_t a, const size_t b );
+extern bool swapCat( const NumCats a, const NumCats b );

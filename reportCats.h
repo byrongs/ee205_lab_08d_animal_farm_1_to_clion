@@ -11,9 +11,9 @@
 
 #pragma once
 #include "catDatabase.h"
-extern void   printCat( const size_t index ) ;
+extern void   printCat( const NumCats index ) ;
 extern void   printAllCats() ;
-extern size_t findCat( const char* name ) ;  /// @returns the index or BAD_CAT
+extern NumCats findCat( const char* name ) ;  /// @returns the index or BAD_CAT
 
 extern const char* genderName( const enum Gender gender ) ;
 
