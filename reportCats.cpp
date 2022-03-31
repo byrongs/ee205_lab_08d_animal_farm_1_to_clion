@@ -12,7 +12,7 @@
 #include "reportCats.h"
 
 #include <stdio.h>
-#include <string.h>  // For strncmp
+#include <string.h>  /// For strncmp
 #include <assert.h>
 #include "reportCats.h"
 #include "catDatabase.h"
