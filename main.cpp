@@ -82,7 +82,6 @@ int main() {
     printAllCats();
 
     int kali = findCat( "Kali" ) ;
-    assert( updateCatName( kali, "Chili" ) == false ) ; // duplicate cat name should fail
     printCat( kali ) ;
     assert( updateCatName( kali, "Capulet" ) == true ) ;
     assert( updateCatWeight( kali, 9.9 ) == true ) ;

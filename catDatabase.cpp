@@ -108,7 +108,7 @@ bool isNameValid( const char* name ) {
 
 /// verify weight is valid
 
-bool isWeightValid( const float weight ) {
+bool isWeightValid( const Weight weight) {
     if( weight <= 0 ) {
         fprintf( stderr, "%s: Cat's weight is [%f].  It must be > 0\n", PROGRAM_NAME, weight ) ;
         return false ;
