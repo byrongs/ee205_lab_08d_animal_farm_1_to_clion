@@ -89,11 +89,11 @@ int main() {
     assert( updateCatCollar1( kali, GREEN ) == true ) ;
     assert( updateCatCollar2( kali, GREEN ) == true ) ;
     assert( updateCatLicense( kali, 201 ) == true ) ;
+    assert(validateCatCollar1( kali, BLACK) == true ) ;
+    assert(validateCatCollar2(kali, BLACK) == true ) ;
     printCat( kali ) ;
 
     printAllCats();
-
-
 
     deleteAllCats() ;
     printAllCats();

@@ -26,7 +26,6 @@
                                         return false;                                                   \
         }
 
-
 bool updateCatName( const NumCats index, const char* name ) {
     if( !isIndexValid( index ) ) {
         fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
@@ -87,3 +86,20 @@ bool updateCatLicense( const NumCats index, const unsigned long long license ) {
     cats[index].license = license ;
     return true;
 }
+
+bool validateCatCollar1(const NumCats index, const enum Color color) {
+    CHECK_INDEX( index )
+    if(cats[index].collarColor1 == cats[index].collarColor2) {
+        fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
+    }
+    return true;
+}
+
+bool validateCatCollar2(const NumCats index, const enum Color color) {
+    CHECK_INDEX( index )
+    if(cats[index].collarColor2 == cats[index].collarColor1) {
+        fprintf( stderr, "%s: %s(): Bad cat!\n", PROGRAM_NAME, __FUNCTION__ ) ;
+    }
+    return true;
+}
+

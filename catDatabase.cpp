@@ -31,8 +31,6 @@ void wipeCatInternal( const NumCats index ) {
 }
 
 
-
-
 /// Zeros out a cat's information from the database
 void wipeCat( const NumCats index ) {
     assert( isIndexValid( index ));
@@ -45,7 +43,6 @@ void initializeDatabase() {
 
     memset( &cats, 0, sizeof( cats ) ) ;
 }
-
 
 bool isFull() {
     validateDatabase() ;  // Make sure things are healthy first
@@ -147,3 +144,4 @@ bool swapCat( const NumCats a, const NumCats b ) {
 
     return true;
 }
+

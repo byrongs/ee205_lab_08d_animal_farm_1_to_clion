@@ -15,10 +15,14 @@
 
 #include "catDatabase.h"
 
-
 extern bool updateCatName( const NumCats index, const char* name ) ;
 extern bool fixCat( const NumCats index ) ;
 extern bool updateCatWeight( const NumCats index, const Weight weight ) ;
 extern bool updateCatCollar1( const NumCats index, const enum Color color ) ;
 extern bool updateCatCollar2( const NumCats index, const enum Color color ) ;
+
+extern bool validateCatCollar1( const NumCats index, const enum Color color ) ;
+
+extern bool validateCatCollar2( const NumCats index, const enum Color color ) ;
+
 extern bool updateCatLicense( const NumCats index, const unsigned long long license );

@@ -12,7 +12,10 @@
 #pragma once
 
 #include <stdbool.h>  // For the bool datatype
-#include <stddef.h>   // For the size_t datatype
+#include <stddef.h>
+#include <time.h>
+#include <stdio.h>
+
 #include "config.h"
 #define MAX_CAT_NAME (50)   /// This defines the size of the cat's name string
 
@@ -34,6 +37,10 @@ struct Catinfo {
     enum Color collarColor2 ;
     unsigned long long license ;
 };
+
+
+
+
 extern struct Catinfo cats[MAX_CATS] ;
 
 extern NumCats numCats ;  /// This points to the next available cat we can add to database
