@@ -85,7 +85,7 @@ add_custom_command(TARGET doxygen
 
 add_custom_command(TARGET doxygen
         POST_BUILD
-        COMMAND rsync --recursive --checksum --delete --compress --stats ${DOXYGEN_OUTPUT_DIRECTORY}/html/ marknels@uhunix.hawaii.edu:~/public_html/ee205/${CMAKE_PROJECT_NAME}
+        COMMAND rsync --recursive --checksum --delete --compress --stats ${DOXYGEN_OUTPUT_DIRECTORY}/html/ byrongs@uhunix.hawaii.edu:~/public_html/ee205/${CMAKE_PROJECT_NAME}
         COMMENT "Pushing files to UHUnix"
         )
 
